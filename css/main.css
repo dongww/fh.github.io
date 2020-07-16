@@ -1,0 +1,107 @@
+body,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#outer {
+    display: inline-block;
+    width: auto;
+}
+
+#content {
+    margin: auto 10px;
+    display: inline-block;
+}
+
+#jy {
+    /* float: left; */
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 0;
+}
+
+#jyBorder {
+    margin: 0 auto;
+    width: 100px;
+    height: 100%;
+    /* background-color: darkcyan; */
+    /* background-image: url(./cl.jpg); */
+    /* background-repeat: repeat; */
+}
+
+#jyInner {
+    height: 100%;
+    width: auto;
+    margin: 0 10px;
+    background-color: darkkhaki;
+}
+
+#jyL {
+    float: left;
+    height: 100%;
+    width: 10px;
+    background-image: url(../images/caiZhi/001.jpg);
+    background-repeat: repeat;
+}
+
+#jyR {
+    float: right;
+    height: 100%;
+    width: 10px;
+    background-image: url(../images/caiZhi/001.jpg);
+    background-repeat: repeat;
+}
+
+#top {
+    height: 100px;
+    background-image: url(../images/caiZhi/004.jpg);
+    background-repeat: repeat;
+}
+
+#bottom {
+    height: 100px;
+    background-image: url(../images/caiZhi/004.jpg);
+    background-repeat: repeat;
+}
+
+#imgOuter {
+    display: inline-block;
+    background-image: url(../images/caiZhi/003.jpg);
+    background-repeat: repeat;
+}
+
+#imgBorder {
+    margin: 20px;
+    background-image: url(../images/caiZhi/002.jpg);
+    background-repeat: repeat;
+}
+
+#fh {
+    margin: 10px 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#jzOuter {
+    height: 15px;
+    background-image: url(../images/jz.jpg);
+}
+
+#jzInner {
+    height: 100%;
+    width: auto;
+    margin: 0 10px;
+    background-image: url(../images/jz001.jpg);
+}
