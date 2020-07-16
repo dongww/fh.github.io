@@ -128,7 +128,7 @@
                                     </div>
 
                                     <div class="layui-form-item" id="outer-selector">
-                                        <label class="layui-form-label">外边</label>
+                                        <label class="layui-form-label">外边框</label>
                                         <div class="layui-input-block">
                                             <select name="" lay-filter="outer">
                                             </select>
@@ -136,7 +136,7 @@
                                     </div>
 
                                     <div class="layui-form-item" id="inner-selector">
-                                        <label class="layui-form-label">内边</label>
+                                        <label class="layui-form-label">内边框</label>
                                         <div class="layui-input-block">
                                             <select name="" lay-filter="inner">
                                             </select>
@@ -152,6 +152,22 @@
                                     </div>
 
                                 </form>
+                            </div>
+                        </div>
+
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">颜色</h2>
+                            <div class="layui-colla-content">
+                                <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+                                    <legend>天地 / 外边 / 内边 / 惊燕</legend>
+                                </fieldset>
+
+                                <div style="margin-left: 30px;">
+                                    <div id="tbColor"></div>
+                                    <div id="outerColor" style="margin-left: 30px;"></div>
+                                    <div id="innerColor" style="margin-left: 30px;"></div>
+                                    <div id="jyColor" style="margin-left: 30px;"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -259,6 +275,48 @@
                 }
             });
         }
+
+        layui.use('colorpicker', function () {
+            var $ = layui.$
+                , colorpicker = layui.colorpicker;
+            //天地颜色
+            colorpicker.render({
+                elem: '#tbColor' //绑定元素
+                , predefine: true
+                , done: function (color) { //颜色改变的回调
+                    $("#top").css('background-image', "url()").css('background-color', color);
+                    $("#bottom").css('background-image', "url()").css('background-color', color);
+                }
+            });
+
+            //外边框颜色
+            colorpicker.render({
+                elem: '#outerColor'
+                , predefine: true
+                , done: function (color) {
+                    $("#imgOuter").css('background-image', "url()").css('background-color', color);
+                }
+            });
+
+            //内边框颜色
+            colorpicker.render({
+                elem: '#innerColor'
+                , predefine: true
+                , done: function (color) {
+                    $("#imgBorder").css('background-image', "url()").css('background-color', color);
+                }
+            });
+
+            //内边框颜色
+            colorpicker.render({
+                elem: '#jyColor'
+                , predefine: true
+                , done: function (color) {
+                    $("#jyL").css('background-image', "url()").css('background-color', color);
+                    $("#jyR").css('background-image', "url()").css('background-color', color);
+                }
+            });
+        });
 
     </script>
 </body>
