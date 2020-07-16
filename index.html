@@ -109,7 +109,7 @@
                                 <div id="jyWidth"></div>
 
                                 <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-                                    <legend>惊燕高</legend>
+                                    <legend>惊燕高度</legend>
                                 </fieldset>
                                 <div id="jyHeight"></div>
                             </div>
@@ -175,30 +175,6 @@
 
     <script src="./javascript/layui/layui.all.js"></script>
     <script>
-        //宽高
-        var imgTopOuterBorderHeight = 0;    //上外边距
-        var imgTopInnerBorderHeight = 0;    //上内边距
-        var imgBottomOuterBorderHeight = 0; //下外边距
-        var imgBottomInnerBorderHeight = 0; //下内边距
-        var imgLrOuterBorderWidth = 0;      //左右外边距
-        var imgLrInnerBorderWidth = 0;      //左右内边距
-        var topHeight = 0;                  //天高
-        var bottomHeight = 0;               //地高
-        var jyDistance = 0;                 //惊燕距离
-        var jyWidth = 0;                    //惊燕宽度
-        var jyHeight = 0;                   //惊燕高
-
-        //材料
-        var imgOuterBorderImg = '';  //边距材料
-        var imgInnerBorderImg = '';  //边距材料
-        var topImg = '';             //天材料
-        var bottomImg = '';          //地材料
-        var jyImg = '';              //惊燕材料
-        var bottomJz = ''            //下方卷轴材料
-
-        //有无惊燕
-        var Jy = false;
-
         var imgHeight = document.body.clientHeight - 500;
         $("#fh").height(imgHeight);
 
@@ -218,13 +194,13 @@
         }
 
         renderSlider('#imgTopOuterBorderHeight', 100, 20, "#imgBorder", ["margin-top"]);           //上外边距
-        renderSlider('#imgTopInnerBorderHeight', 100, 20, "#fh", ["margin-top"]);                  //上内边距
+        renderSlider('#imgTopInnerBorderHeight', 100, 10, "#fh", ["margin-top"]);                  //上内边距
         renderSlider('#imgBottomOuterBorderHeight', 100, 20, "#imgBorder", ["margin-bottom"]);     //下外边距
-        renderSlider('#imgBottomInnerBorderHeight', 100, 20, "#fh", ["margin-bottom"]);            //下内边距
+        renderSlider('#imgBottomInnerBorderHeight', 100, 10, "#fh", ["margin-bottom"]);            //下内边距
         renderSlider('#imgLrOuterBorderWidth', 100, 20, "#imgBorder", ["margin-left", "margin-right"]);   //左右外边距
         renderSlider('#imgLrInnerBorderWidth', 100, 20, "#fh", ["margin-left", "margin-right"]);   //左右内边距
-        renderSlider('#topHeight', 100, 20, "#top", ["height"]);         //天高
-        renderSlider('#bottomHeight', 100, 20, "#bottom", ["height"]);   //地高
+        renderSlider('#topHeight', 200, 100, "#top", ["height"]);         //天高
+        renderSlider('#bottomHeight', 200, 100, "#bottom", ["height"]);   //地高
 
         layui.form.on('switch(showJy)', function (data) {
             if (this.checked) {
@@ -234,7 +210,7 @@
             }
         });
 
-        renderSlider('#jyDistance', 300, 20, "#jyBorder", ["width"]);    //惊燕距离
+        renderSlider('#jyDistance', 300, 100, "#jyBorder", ["width"]);    //惊燕距离
         // renderSlider('#jyWidth', 50, 20, "#jyInner", ["margin-left", "margin-right"]);    //惊燕宽度
         renderSlider('#jyHeight', 200, 100, "#jyBorder", ["height"]);    //惊燕高度
 
